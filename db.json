@@ -1,0 +1,157 @@
+{
+  "user": [
+    {
+      "id": "Mahlatse",
+      "name": "Mahlatse Serathi",
+      "password": "MkenosiS",
+      "email": "serathikm@gmail.com",
+      "phone": "0676482868",
+      "address": "542 C Mosia Street, Jabavu, Soweto",
+      "gender": "female"
+    },
+    {
+      "id": "Kenosi",
+      "name": "Kenosi Thejoane",
+      "password": "nono2",
+      "email": "kenosiT@gmail.com",
+      "phone": "0730503382",
+      "address": "11 Ivy Auckland Park Johannesburg",
+      "gender": "female"
+    },
+    {
+      "id": "Keo",
+      "name": "Keoratile South",
+      "password": "kratile55",
+      "email": "keo@gmail.com",
+      "phone": "0738833317",
+      "address": "7th Avenue Parkmore, Sandton",
+      "gender": "male"
+    },
+    {
+      "id": "Tlhogi",
+      "name": "Tlhogi Twin",
+      "password": "password@",
+      "email": "twin@gmail.com",
+      "phone": "0112556699",
+      "address": "100 Seth Street, Parkmore, Sandton",
+      "gender": "male"
+    },
+    {
+      "password": "MkenosiS",
+      "username": "Mahlatse ",
+      "id": "U0PT4H6"
+    },
+    {
+      "password": "MkenosiS",
+      "username": "Mahlatse",
+      "id": "mGKSwGf"
+    },
+    {
+      "password": "//",
+      "username": "hey",
+      "id": "fDQsVfY"
+    },
+    {
+      "password": "l mlm",
+      "username": "lm l",
+      "id": "nQFej4U"
+    },
+    {
+      "password": "hff",
+      "username": "hhh",
+      "id": "6s_g74Q"
+    },
+    {
+      "password": "",
+      "username": "",
+      "id": "YLo0-Y0"
+    },
+    {
+      "password": "kb k",
+      "username": " kk",
+      "id": "Tsf1M12"
+    },
+    {
+      "password": "fg",
+      "username": "hh",
+      "id": "gBQh4kz"
+    },
+    {
+      "password": "c",
+      "username": "hg",
+      "id": "X3R_bS9"
+    },
+    {
+      "password": "mnb mn",
+      "username": "knjn",
+      "id": "Pq-prrg"
+    },
+    {
+      "password": "",
+      "username": "jhbjhb",
+      "id": "ausouhV"
+    },
+    {
+      "password": " b",
+      "username": " j jb",
+      "id": "h-DgTk7"
+    },
+    {
+      "password": "jbjb",
+      "username": "bjbj",
+      "id": "doeJZab"
+    },
+    {
+      "id": "gett",
+      "name": "Getty South",
+      "password": "getty",
+      "email": "g@gmail.com",
+      "phone": "028896854",
+      "address": "11 West Street Centurion",
+      "gender": "female"
+    },
+    {
+      "id": "het",
+      "name": "hey you",
+      "password": "hey",
+      "email": "g@gmail.com",
+      "phone": "28896854",
+      "address": "11 West Street Centurion",
+      "gender": "female",
+      "completed": false
+    },
+    {
+      "id": "fftc ",
+      "name": "tftf",
+      "password": "fftft",
+      "email": "g@gmail.com",
+      "phone": "28896854",
+      "address": "11 West Street Centurion",
+      "gender": "male"
+    },
+    {
+      "id": "yrtyrt",
+      "name": "ryrtyut",
+      "password": "tyrtyrt",
+      "email": "g@gmail.com",
+      "phone": "28896854",
+      "address": "11 West Street Centurion",
+      "gender": "male"
+    },
+    {
+      "title": "Getty South",
+      "id": "Z8Zr--A",
+      "completed": true
+    },
+    {
+      "title": "Task",
+      "id": "I4lNB0v",
+      "completed": true
+    },
+    {
+      "title": "Task",
+      "id": "4Hg1TmO",
+      "completed": true
+    }
+  ]
+}
