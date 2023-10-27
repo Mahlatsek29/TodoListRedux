@@ -152,6 +152,19 @@
       "title": "Task",
       "id": "4Hg1TmO",
       "completed": true
+    },
+    {
+      "id": "Phile",
+      "name": "Omphile Sethe",
+      "password": "O123",
+      "email": "omphile@gmail.com",
+      "phone": "987456321",
+      "address": "21 Robert Street, North",
+      "gender": "male"
+    },
+    {
+      "title": "Do Task",
+      "id": "A8G-RBL"
     }
   ]
 }

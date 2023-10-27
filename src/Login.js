@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
 
-
 const Login = () => {
   const [username, updateusername] = useState("");
   const [password, updatepassword] = useState("");
@@ -14,46 +13,22 @@ const Login = () => {
     sessionStorage.clear();
   }, []);
 
-  const proceedLogin = async(e) => {
+  const proceedLogin = async (e) => {
     e.preventDefault();
     if (validate()) {
-      // fetch("http://localhost:8000/user/" + username)
-      //   .then((res) => {
-      //     return res.json();
-      //   })
-      //   .then((resp) => {
-      //     if (Object.keys(resp).length === 0) {
-      //       toast.error("Please enter a valid username");
-      //     } else {
-      //       if (resp.password === password) {
-      //         toast.success("Success");
-      //         sessionStorage.setItem("username", username);
-      //         navigate("/");
-      //       } else {
-      //         toast.error("Please enter a valid password");
-      //       }
-      //     }
-      //   })
-      //   .catch((err) => {
-      //     toast.error("Login failed due to: " + err.message);
-      //   });
-
       try {
-        const response = await axios.get("http://localhost:8000/user/")
-       // const {username, password } = response.data
-
-        const userData = response.data
-        const user1 = userData.some((item) => item.id == username )
-        console.log(user1)
-        if(user1){
+        const response = await axios.get("http://localhost:8000/user/");
+        const userData = response.data;
+        const user1 = userData.some((item) => item.id == username);
+        console.log(user1);
+        if (user1) {
           toast.success("Success");
-          navigate("/todo")
-        }else{
-          alert("Please enter a valid credentials")
+          navigate("/todo");
+        } else {
+          alert("Please enter valid credentials");
         }
-       // console.log("my username : " + username + " and my password " + password)       console.log(response.data)
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
     }
   };
@@ -74,12 +49,12 @@ const Login = () => {
   return (
     <div className="row">
       <div className="offset-lg-3 col-lg-6" style={{ marginTop: "100px" }}>
-        <form onSubmit={proceedLogin} className="container">
-          <div className="card">
-            <div className="card-header">
-              <h2>User Login</h2>
-            </div>
-            <div className="card-body">
+        <div className="card">
+          <div className="card-header">
+            <h2>User Login</h2>
+          </div>
+          <div className="card-body">
+            <form onSubmit={proceedLogin} className="container">
               <div className="form-group">
                 <label>
                   User Name <span className="errmsg">*</span>
@@ -101,17 +76,17 @@ const Login = () => {
                   className="form-control"
                 />
               </div>
-            </div>
-            <div className="card-footer">
-              <button type="submit" className="btn btn-primary">
-                Login
-              </button>
-              <Link to="/register" className="btn btn-success">
-                New User
-              </Link>
-            </div>
+            </form>
           </div>
-        </form>
+          <div className="card-footer">
+            <button type="submit" className="btn btn-primary" onClick={proceedLogin}>
+              Login
+            </button>
+            <Link to="/register" className="btn btn-success">
+              New User
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

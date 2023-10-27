@@ -1,9 +1,7 @@
-import { useState } from "react";
-import {Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
-
-
 
 const Register = () => {
   const [id, idchange] = useState("");
@@ -19,74 +17,56 @@ const Register = () => {
   const IsValidate = () => {
     let isproceed = true;
     let errormessage = "Please enter valid value";
-    if (id === null || id === "") {
+    if (id === "" || id === null) {
       isproceed = false;
       errormessage += " Username";
     }
-    if (id === null || name === "") {
+    if (name === "" || name === null) {
       isproceed = false;
       errormessage += " Fullname";
     }
-    if (id === null || email === "") {
+    if (email === "" || email === null) {
       isproceed = false;
       errormessage += " Email";
     }
-    if (id === null || password === "") {
+    if (password === "" || password === null) {
       isproceed = false;
       errormessage += " Password";
     }
-    
+
     if (!isproceed) {
       toast.warning(errormessage);
     } else {
-      if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email)) {
-      } else {
+      if (!/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email)) {
         isproceed = false;
-        toast.warning("Please enter valid email");
+        toast.warning("Please enter a valid email");
       }
-    } 
+    }
     return isproceed;
   };
 
-  const handleSubmit  = async(e) => {
-  
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    let regobj = { id, name, password, email, phone, address, gender};
+    let regobj = { id, name, password, email, phone, address, gender };
     if (IsValidate()) {
-      // console.log(regobj);
-
-      // fetch("http://localhost:8000/user", {
-      //   method: "POST",
-      //   headers: { "content-type": "application/json" },
-      //   body: JSON.stringify(regobj),
-      // }).then((res) => {
-      //     toast.success("Registered successfully.");
-      //     navigate("/login");
-      //   }).catch((err) => {
-      //     console.log("the error is coming from here!!!")
-      //     window.location.reload(true)
-      //     toast.err("Failed :" + err.message);
-      //   });
       try {
-        await axios.post("http://localhost:8000/user", regobj)
+        await axios.post("http://localhost:8000/user", regobj);
         toast.success("Success");
-          navigate("/login")
+        navigate("/login");
       } catch (error) {
-        // toast.error("Please enter a valid credentials")
-        alert("User already registered!!!")
+        alert("User already registered!!!");
       }
-      
-
     }
   };
+
   return (
-    <div className="row">
-      <div className="offset-lg-3 col-lg-6">
-        <form className="container" onSubmit={handleSubmit}>
-          <div className="card-header">
-            <h1> User Registration</h1>
-          </div>
-          <div className="card-body">
+    <div className="container">
+      <div className="card mt-5">
+        <div className="card-header">
+          <h1 className="text-center">User Registration</h1>
+        </div>
+        <div className="card-body">
+          <form onSubmit={handleSubmit}>
             <div className="row">
               <div className="col-lg-6">
                 <div className="form-group">
@@ -193,12 +173,17 @@ const Register = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="card-footer">
-          <button type="submit" className="btn btn-primary">Register</button> |
-            <Link to={'/login'} className="btn btn-danger">Close</Link>
-          </div>
-        </form>
+          </form>
+        </div>
+        <div className="card-footer text-center">
+          <button type="submit" className="btn btn-primary">
+            Register
+          </button>{" "}
+          |
+          <Link to="/login" className="btn btn-danger">
+            Close
+          </Link>
+        </div>
       </div>
     </div>
   );
